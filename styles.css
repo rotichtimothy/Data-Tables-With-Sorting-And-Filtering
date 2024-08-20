@@ -1,0 +1,132 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+    color: #333;
+}
+
+#searchInput {
+    margin-bottom: 12px;
+    padding: 10px;
+    width: calc(100% - 22px);
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e9ecef;
+}
+
+#pagination {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.page-btn {
+    padding: 8px 12px;
+    margin: 0 2px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-btn.active {
+    background-color: #0056b3;
+}
+
+.page-btn:hover {
+    background-color: #0056b3;
+}
+
+.sort-icon {
+    margin-left: 5px;
+}
+
+button.export-csv {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: 2px solid #0056b3;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button.export-csv:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+button.reset-button {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: #fff;
+    border: 2px solid #c82333;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+button.reset-button:hover {
+    background-color: #c82333;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        display: block;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 0;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Search for names..">
+    <button class ="reset-button" id="resetButton" onclick="resetTable()">Reset</button>
+    <button class="export-csv" id="exportButton" onclick="exportTableToCSV('table_data.csv')">Export to CSV</button>
+    
+    <table id="dataTable" role="table" aria-label="Data table with sort and filter functionality">
+        <thead role="rowgroup">
+            <tr role="row">
+                <th role="columnheader" onclick="sortTable(0)">Name</th>
+                <th role="columnheader" onclick="sortTable(1)">Age</th>
+                <th role="columnheader" onclick="sortTable(2)">Country</th>
+            </tr>
+            <tr>
+                <th><input type="text" onkeyup="filterByColumn(0)" placeholder="Search by Name"></th>
+                <th><input type="text" onkeyup="filterByColumn(1)" placeholder="Search by Age"></th>
+                <th><input type="text" onkeyup="filterByColumn(2)" placeholder="Search by Country"></th>
+            </tr>
+        </thead>
+        <tbody role="rowgroup">
+            <tr><td>John Doe</td><td>25</td><td>USA</td></tr>
+            <tr><td>Mary Smith</td><td>30</td><td>UK</td></tr>
+            <tr><td>Linda Johnson</td><td>45</td><td>Canada</td></tr>
+            <tr><td>Alice Brown</td><td>35</td><td>Australia</td></tr>
+            <tr><td>Bob White</td><td>28</td><td>Germany</td></tr>
+            <tr><td>Charlie Black</td><td>40</td><td>France</td></tr>
+            <tr><td>Diana Green</td><td>32</td><td>South Africa</td></tr>
+            <tr><td>Eve Blue</td><td>22</td><td>Brazil</td></tr>
+            <tr><td>Frank Grey</td><td>50</td><td>Japan</td></tr>
+            <tr><td>Grace Pink</td><td>29</td><td>New Zealand</td></tr>
+            <tr><td>Harry Red</td><td>34</td><td>India</td></tr>
+            <tr><td>Ivy Violet</td><td>27</td><td>Italy</td></tr>
+            <tr><td>Jack Orange</td><td>33</td><td>China</td></tr>
+            <tr><td>Kate Yellow</td><td>31</td><td>Mexico</td></tr>
+            <tr><td>Liam Gold</td><td>42</td><td>Sweden</td></tr>
+            <tr><td>Mia Silver</td><td>38</td><td>Spain</td></tr>
+            <tr><td>Noah Bronze</td><td>36</td><td>Netherlands</td></tr>
+            <tr><td>Olivia Copper</td><td>24</td><td>Russia</td></tr>
+            <tr><td>Pete Iron</td><td>41</td><td>South Korea</td></tr>
+            <tr><td>Quinn Steel</td><td>47</td><td>Norway</td></tr>
+            <tr><td>Riley Wood</td><td>23</td><td>Argentina</td></tr>
+            <tr><td>Sam Glass</td><td>39</td><td>Switzerland</td></tr>
+            <tr><td>Tina Stone</td><td>26</td><td>Finland</td></tr>
+            <tr><td>Uma Ice</td><td>44</td><td>Denmark</td></tr>
+            <tr><td>Victor Water</td><td>37</td><td>Austria</td></tr>
+            <tr><td>Wendy Fire</td><td>48</td><td>Greece</td></tr>
+            <tr><td>Xander Earth</td><td>35</td><td>Ireland</td></tr>
+            <tr><td>Yara Sky</td><td>49</td><td>Portugal</td></tr>
+            <tr><td>Zane Star</td><td>43</td><td>Iceland</td></tr>
+        </tbody>
+    </table>
+
+    <div id="pagination"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
